@@ -3,15 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>demo-application</artifactId>
-    <version>0.1</version>
-
     <parent>
         <groupId>io.micronaut.platform</groupId>
         <artifactId>micronaut-parent</artifactId>
         <version>4.10.2</version>
     </parent>
+
+    <groupId>com.example</groupId>
+    <artifactId>demo-micronaut</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <jdk.version>21</jdk.version>
@@ -71,6 +71,12 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>io.micronaut.maven</groupId>
